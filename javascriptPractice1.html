@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>First Javascript</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            
+            <h2 style="color: red;">variable diclear</h2>
+            <script>
+                // document
+                document.write("Md. Jahurul Islam");
+                document.write("<br/>");
+                // variable
+
+                var myname="Variable Useing";
+                document.write(myname);
+
+                document.write("<br/>");
+                var a = 5;
+                var b = 5;
+                var sum= a+b;
+                document.write("Sum: ",sum)
+
+                document.write("<br/>");
+                var a = 6;
+                var b = 5;
+                var sub = a-b;
+                document.write("Sub: ", sub)
+
+                document.write("<br/>");
+                var a= 7;
+                var b = 2;
+                var div = a/b;
+                document.write("Div: ", div);
+            </script>
+
+    <h2 style="color: red;">Function</h2>
+            <script>
+                var color = "green";
+                function functionOne(){
+                    var color = "red";
+                    // window.color="blue"; global variable 
+                    document.write(color);
+                }
+                functionOne();
+                document.write("<br/>");
+                document.write(color);
+            </script>
+            
+        </div>
+
+        <div class="footer">
+            By Jahurul
+        </div>
+    </section>
+</body>
+</html>
