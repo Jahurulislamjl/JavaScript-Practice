@@ -34,7 +34,37 @@
                 color.sort();
                 document.write("after sorting: "+ color)
             </script>
-            
+<br>
+            <script>
+                var num = [10,12,11,8,2,9,5,7,3,1,6,4];
+                document.write("Before sorting: "+num +"<br/>");
+
+                function arrSort(x,y){
+                    return(x-y);
+                }
+                num.sort(arrSort);
+                document.write("after sorting assending: "+ num);
+
+                function arrySort(x,y){
+                    return(y-x);
+                }
+                num.sort(arrySort);
+                document.write("after sorting de: "+ num)
+            </script>
+
+<br>
+
+        <script>
+            var num = [10,12,11,8,2,9,5,7,3,1,6,4];
+            document.write("Before sorting: "+num +"<br/>");
+
+            function arrySort(x,y){
+                return(y-x);
+            }
+            num.sort(arrySort);
+            document.write("after sorting de: "+ num)
+        </script>
+                
     
     </section>
 </body>
