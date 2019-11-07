@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Array&object</title>
+    <title>Array</title>
 </head>
 <body>
     <section class="content">
@@ -43,26 +43,28 @@
                     return(x-y);
                 }
                 num.sort(arrSort);
-                document.write("after sorting assending: "+ num);
-
-                function arrySort(x,y){
-                    return(y-x);
-                }
-                num.sort(arrySort);
-                document.write("after sorting de: "+ num)
+                document.write("after sorting ascending: "+ num);
             </script>
 
 <br>
 
         <script>
             var num = [10,12,11,8,2,9,5,7,3,1,6,4];
-            document.write("Before sorting: "+num +"<br/>");
+            document.write(num.length+"<br/>");
+
+            document.write("Before sorting: "+num +"<br/>"  );
 
             function arrySort(x,y){
                 return(y-x);
             }
             num.sort(arrySort);
-            document.write("after sorting de: "+ num)
+            document.write("after sorting descending: "+ num)
+        </script>
+<br>
+        <script>
+            var numb = [1,2,3,4,5,6];
+            numb.push(7);
+            document.write(numb);
         </script>
                 
     
