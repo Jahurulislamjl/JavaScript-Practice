@@ -44,8 +44,34 @@
                         
                     }
                     document.getElementById("show").innerHTML = txt;
+                }   
+            </script>
+<br> <br>
+            <input id="takeText" type="text">
+            <button onclick="checkText()">Show</button>
+            <div id="showOutput"></div>
+            <script>
+                function checkText(){
+                    var txt;
+
+                    switch(document.getElementById("takeText").value){
+                        case "jahurul": 
+                        txt = "I am Jahurul!";
+                        break;
+
+                        case "sneha":
+                        txt = "Angel Sneha!";
+                        break;
+
+                        case "shafin":
+                        txt = "Noughty boy Shafin!";
+                        break;
+
+                        default: 
+                        txt = "Unknown...!";
+                    }
+                    document.getElementById("showOutput").innerHTML= txt;
                 }
-               
             </script>
         </div>   
     </section>

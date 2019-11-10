@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Event</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            
+            <h2 style="color: red;">Event</h2>
+
+            <button onclick="checkEvent()">Check Here</button>
+            <script>
+
+                function checkEvent(){
+                    // document.write("your event")
+                    console.log("Your Event Here....!");
+                }
+            </script>
+
+            <br><br>
+            <button ondblclick="checkEvent()">Double Click</button>
+            <script>
+
+                function checkEvent(){
+                    document.write("your event")
+                    console.log("Your Event Here....!");
+                }
+            </script>
+
+            <br> <br>
+            <button onmouseover="checkEvent()">Mouse Event</button>
+            <script>
+                function checkEvent(){
+                    document.write("Mouseover worked!");
+                }
+            </script>
+
+            <br><br>
+            <h2 style="color: red;">This Keyword</h2>
+            <script>
+                function thisKey(){
+                    var a = 100;
+                    this.x = 200;
+                    this.y = 300;
+                    this.z = function(){
+                        return this.x + this.y;
+                    }
+                }
+                var obj = new thisKey();
+                document.write(obj.z());
+            </script>
+
+            <br><br>
+            <h2 style="color: red;">Prototype</h2>
+            <script>
+                function prototypeOne(a,b){
+                    this.x = a;
+                    this.y = b;
+                    this.sum = function(){
+                        return this.x + this.y;
+                    }
+                }
+                var obj = new prototypeOne(2,3);
+                document.write(obj.sum());
+            </script>
+
+        </div>   
+    </section>
+</body>
+</html>
