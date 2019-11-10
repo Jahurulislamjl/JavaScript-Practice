@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Inheritance</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            
+            <h2 style="color: red;">Inheritance</h2>
+               <script>
+                   function totalNum(a, b){
+                       this.x = a;
+                       this.y = b;
+                       this.sum = function(){
+                          return this.x + this.y;
+                       }
+                   }
+
+                   function productNum(a, b){
+                       this.x = a;
+                       this.y = b;
+                       this.product = function(){
+                          return this.x * this.y;
+                       }
+                   }
+
+                   totalNum.prototype = new productNum();
+                   var tn = new totalNum(2,3);
+                   document.write(tn.product());
+               </script>   
+        </div>
+    
+    </section>
+</body>
+</html>
