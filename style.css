@@ -3,13 +3,14 @@ body{
     font-size: 18px;
     color: #444;
     line-height: 25px;
+    background: rgb(104, 101, 101);
 }
 
 .content{
     margin-top:10px;
     height: 600px;
     width: 800px;
-    padding-left:300px ;
+    padding-left:300px;
     
 }
 

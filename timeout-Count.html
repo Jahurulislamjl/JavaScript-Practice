@@ -40,6 +40,39 @@
             </div>
             <div id="show"></div>
 
+            <br> <br>
+            <h2 style="color: red;">Countdown</h2>
+            <script>
+                var countdown;
+                var countdownNumber;
+
+                function countdownInit(){
+                    countdownNumber = 11;
+                    countdownTrigger();
+                    
+                }
+
+                function countdownTrigger(){
+                    if(countdownNumber > 0){
+                        countdownNumber --;
+                        document.getElementById("showcount").innerHTML = countdownNumber;
+                        }   
+                        if(countdownNumber > 0){
+                        countdown = setTimeout("countdownTrigger()", 1000)
+                        
+                    }
+                }
+
+                function clearCountdown(){
+                    clearTimeout(countdown);
+                }
+
+            </script>
+            <div>
+                <input type="button" value="Start Countdown" onclick="countdownInit()">
+                <input type="button" value="Stop Countdown" onclick="clearCountdown()">
+            </div>
+            <div id="showcount"></div>
         </div>
     
     </section>
