@@ -73,6 +73,21 @@
                 <input type="button" value="Stop Countdown" onclick="clearCountdown()">
             </div>
             <div id="showcount"></div>
+
+            <br> <br>
+            <h2 style="color: red;">Clear Interval</h2> #showing interval alert after loading
+            <script>
+                var i=0;
+                var x = setInterval(function(){
+                    i++;
+                    alert("yes");
+                    if(i==2){
+                        clearInterval(x);
+                    }
+                    
+                }, 3000)
+            </script>
+
         </div>
     
     </section>
