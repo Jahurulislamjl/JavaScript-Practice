@@ -30,3 +30,20 @@ body{
 
     background: rgb(202, 200, 200);
 }
+
+table{
+    width: 270px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #cfcccc;
+}
+input[type="text"]{
+    width: 100px;
+    padding:5px 8px;
+}
+
+input[type="button"]{
+    width: 120px;
+    padding:5px;
+    cursor: pointer;
+}
