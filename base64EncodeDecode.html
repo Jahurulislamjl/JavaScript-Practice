@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Base64 Decode&Encode</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            <h2 style="color: red;">Encode</h2>
+            <script>
+                var srt = "MicroDreamIT is the best Software company.";
+                var encod = btoa(srt);
+                document.write(encod);
+                document.write("<br/>"+"<br/>"+"Decode"+"<br/>"+"<br/>");
+                var decod = atob(encod);
+                document.write(decod);
+            </script>
+              
+        </div>
+    
+    </section>
+</body>
+</html>
