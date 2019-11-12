@@ -14,46 +14,114 @@
 
         <div class="maincontent">
             <h2 style="color: red;">Calculator</h2>
+            <form name="frm">
+                <table>
+                    <caption>Example of Different Methods and Properties of Math Object</caption>
+                    <tr>
+                        <td>Input Box: </td>
+                        <td><input type="text" name="getvalue"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Absolute" onclick="calculate(1)"></td>
+                        <td><input type="button" value="Round" onclick="calculate(2)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Sine" onclick="calculate(3)"></td>
+                        <td><input type="button" value="Cosine" onclick="calculate(4)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Tangent" onclick="calculate(5)"></td>
+                        <td><input type="button" value="Log" onclick="calculate(6)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Floor" onclick="calculate(7)"></td>
+                        <td><input type="button" value="Ceil" onclick="calculate(8)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Square Root" onclick="calculate(9)"></td>
+                        <td><input type="button" value="Random" onclick="calculate(10)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="Max" onclick="calculate(11)"></td>
+                        <td><input type="button" value="Min" onclick="calculate(12)"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="E" onclick="calculate(13)"></td>
+                        <td><input type="button" value="Pi" onclick="calculate(14)"></td>
+                    </tr>
+                    <tr>
+                        <td>Result: </td>
+                        <td><input type="text" name="showResult"></td>
+                    </tr>
+                </table>
+            </form>
 
-            <table>
-                <caption>Example of Different Methods and Properties of Math Object</caption>
-                <tr>
-                    <td>Input Box: </td>
-                    <td><input type="text" name="getvalue"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Absolute" onclick="calculate(1)"></td>
-                    <td><input type="button" value="Round" onclick="calculate(2)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Sine" onclick="calculate(3)"></td>
-                    <td><input type="button" value="Cosine" onclick="calculate(4)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Tangent" onclick="calculate(5)"></td>
-                    <td><input type="button" value="Log" onclick="calculate(6)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Floor" onclick="calculate(7)"></td>
-                    <td><input type="button" value="Ceil" onclick="calculate(8)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Square Root" onclick="calculate(9)"></td>
-                    <td><input type="button" value="Random" onclick="calculate(10)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="Max" onclick="calculate(11)"></td>
-                    <td><input type="button" value="Min" onclick="calculate(12)"></td>
-                </tr>
-                <tr>
-                    <td><input type="button" value="E" onclick="calculate(13)"></td>
-                    <td><input type="button" value="Pi" onclick="calculate(14)"></td>
-                </tr>
-                <tr>
-                    <td>Result: </td>
-                    <td><input type="text" name="getvalue"></td>
-                </tr>
-            </table>
+            <script>
+                with(document.frm);
+                function calculate(process){
+                    switch(process){
+                        case 1:
+                        showResult.value = Math.abs(getvalue.value);
+                        break;
+
+                        case 2:
+                        showResult.value = Math.round(getvalue.value);
+                        break;
+
+                        case 3:
+                        showResult.value = Math.sin(convDegree(getvalue.value));
+                        break;
+
+                        case 4:
+                        showResult.value = Math.cos(convDegree(getvalue.value));
+                        break;
+
+                        case 5:
+                        showResult.value = Math.tan(convDegree(getvalue.value));
+                        break;
+
+                        case 6:
+                        showResult.value = Math.log(getvalue.value);
+                        break;
+
+                        case 7:
+                        showResult.value = Math.floor(getvalue.value);
+                        break;
+
+                        case 8:
+                        showResult.value = Math.ceil(getvalue.value);
+                        break;
+
+                        case 9:
+                        showResult.value = Math.sqrt(getvalue.value);
+                        break;
+
+                        case 10:
+                        showResult.value = Math.random();
+                        break;
+
+                        case 11:
+                        showResult.value = Math.sqrt(getvalue.value);
+                        break;
+
+                        case 12:
+                        showResult.value = Math.sqrt(getvalue.value);
+                        break;
+
+                        case 13:
+                        showResult.value = Math.sqrt(getvalue.value);
+                        break;
+
+                        case 14:
+                        showResult.value = Math.sqrt(getvalue.value);
+                        break;
+                    }
+                }
+
+                function convDegree(x){
+                    return x*22/7/180;
+                }
+            </script>
               
         </div>
     
