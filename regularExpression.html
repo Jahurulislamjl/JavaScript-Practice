@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            <h2 style="color: red;">Regular Expressions</h2>
+            <button onclick="myreg()">Search</button>
+            <div id="show"></div>
+            <script>
+                function myreg(){
+                    var str = "JavaScript is awesome";
+                    var sr = str.search(/awesome/i);
+                    document.getElementById("show").innerHTML = sr;
+                }
+            </script>
+
+            <br> <br>
+            <button onclick="myregu()">Replace</button>
+            <div id="show1">My name is Jahurul</div>
+            <script>
+                function myregu(){
+                    var str = document.getElementById("show1").innerHTML;
+                    var input = str.replace("Jahurul","Islam");
+                    document.getElementById("show1").innerHTML = input;
+                }
+            </script>
+
+        </div>
+    
+    </section>
+</body>
+</html>
