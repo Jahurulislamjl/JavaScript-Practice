@@ -38,6 +38,49 @@
                 }
             </script>
 
+            <br> <br>
+
+            <h4 style="color: red;">Check Box</h4>
+        
+                    <form name="myform">
+                        <table>
+                            <tr>
+                                <td><input type="text" name="txtinput" onchange="docal(this.form, this.name)"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="ckbox" onclick="docal(this.form, this.name)"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" name="result" onchange="docal(this.form, this.name)"></td>
+                            </tr>
+                            <tr>
+                                <td><input type="reset" name="rest"></td>
+                            </tr>
+                        </table>
+                    </form>
+
+
+                <script>
+                    function docal(form, pfiled){
+                       if(pfiled == "result"){
+                        if(form.ckbox.checked){
+                            form.txtinput.value = Math.sqrt(form.result.value);
+                        }
+                        else{
+                            form.txtinput.value = form.result.value/2;
+                        }
+                       }
+                       else{
+                        if(form.ckbox.checked){
+                            form.result.value = form.txtinput.value*form.txtinput.value;
+                        }
+                        else{
+                            form.result.value = form.txtinput.value*2;
+                        }
+                       }
+                    }
+                </script>
+
         </div>
     
     </section>
