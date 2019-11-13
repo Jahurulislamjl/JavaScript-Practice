@@ -15,7 +15,7 @@
         <div class="maincontent">
             <h4 style="color: red;">Form Validation</h4>
 
-            <form name="myform" method="post">
+            <form name="myform" method="post" onsubmit="return formSubmit()">
                 <table>
                     <tr>
                         <td>Name</td>
@@ -50,13 +50,45 @@
                     <tr>
                         <td></td>
                         <td>
-                            <input type="submit" value="Submit">
-                            <input type="reset" value="Reset">
+                            <input type="submit" name="submit" value="Submit">
+                            <input type="reset" name="reset" value="Reset">
                         </td>
+                    </tr>
+                    <tr>
+                        <td ><div id="errmessage"></div></td>
                     </tr>
                 </table>
             </form>
 
+            <script>
+                function formSubmit(){
+                    var nam = document.myform.name;
+                    var emal = document.myform.email;
+                    var phnno = document.myform.phoneno;
+                    var notcall = document.myform.notCall;
+                    var option = document.myform.subject;
+                    var comment = document.myform.comment;
+
+                    if(nam.value == ""){
+                        document.getElementById("errmessage").innerHTML="Name field is blank!";
+                        return false;
+                    }
+
+                    if(emal.value.indexOf("@",0)<0){
+                        document.getElementById("errmessage").innerHTML="Enter valid email..";
+                        return false;
+                    }
+                    if(phnno.value=="" && notcall.checked==false){
+                        document.getElementById("errmessage").innerHTML="Enter Your Number..";
+                        return false;
+                    }
+
+                    if(phnno.value=="" && notcall.checked==false){
+                        document.getElementById("errmessage").innerHTML="Enter Your Number..";
+                        return false;
+                    }
+                }
+            </script>
 
         </div>
     
