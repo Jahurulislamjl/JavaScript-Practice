@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <section class="content">
+        <div class="header">
+            Tutorial: JavaScript Fundamentals
+        </div>
+
+        <div class="maincontent">
+            <h4 style="color: red;">Validation Using Regular Expressions</h4>
+
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" id="getvalue" onkeyup="validateEmail()">
+                <label id="show"></label>
+                <script>
+                    function validateEmail(){
+                        var getEmail = document.getElementById("getvalue");
+                        var email = getEmail.value;
+                        var emailRegEx = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+                        getEmail.style.color = "white";
+                        
+                        if(emailRegEx.test(email)){
+                            getEmail.style.backgroundColor = "green";
+                            
+                            document.getElementById("show").innerHTML = "Correct email!";
+                            document.getElementById("show").style.color = "green";
+                        }
+                        else{
+                            getEmail.style.backgroundColor = "red";
+                            
+                            document.getElementById("show").innerHTML = "Please enter correct email!";
+                            document.getElementById("show").style.color = "red";
+                        }
+                    }
+                </script>
+            </div>
+
+
+
+        </div>
+    
+    </section>
+</body>
+</html>
