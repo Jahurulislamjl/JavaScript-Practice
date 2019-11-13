@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Form Element</title>
+    <title>Form Element-CheckBox</title>
 </head>
 <body>
     <section class="content">
@@ -50,6 +50,45 @@
                         }
                         cd+= "</ul>";
                         return cd;
+                }
+            </script>
+
+            <br>
+            <h4 style="color: red;">Radio Button</h4>
+
+            <form name="myform" onsubmit="tstCode()">
+                <table>
+                    <tr>
+                        <td>Select</td>
+                        <td>
+                            <input type="radio" name="rdio" value="JAVA"> JAVA<br>
+                            <input type="radio" name="rdio" value="PHP">PHP<br>
+                            <input type="radio" name="rdio" value="HTML">HTML<br>
+                            <input type="radio" name="rdio" value="CSS">CSS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+
+            <script>
+                function tstCode(){
+                    document.write("You Selected: "+selctedItem());
+                }
+
+                function selctedItem(){
+                        for(i=0; i<=3; i++){
+                            var getrdItem = document.myform.rdio[i];
+                            if(getrdItem.checked){
+                               return  getrdItem.value;
+                            }
+                        }
+                    
                 }
             </script>
 
